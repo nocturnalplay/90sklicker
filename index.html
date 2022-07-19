@@ -4,13 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>90's klicker</title>
+    <meta name="description" content="Qutation Generator for Attirant Webz" />
     <script src="https://unpkg.com/pdf-lib"></script>
+    <script src="https://unpkg.com/@pdf-lib/fontkit"></script>
     <script src="https://unpkg.com/downloadjs"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>90's klicker</title>
   </head>
   <body>
-    <embed type="application/pdf" src="http://localhost:9000/qt.pdf" />
-    <script src="script.js"></script>
+    <div class="header">
+      <img src="https://90sklicker.netlify.app/90sklicker.png" alt="logo" />
+    </div>
+    <div class="form">
+      <div class="chld">
+        <label for="username">client</label>
+        <input class="input" id="username" type="text" name="username" />
+      </div>
+      <div class="chld">
+        <label for="cars">package</label>
+        <select id="cars" class="input" name="pk">
+          <option value="0">Silver</option>
+          <option value="1">Gold</option>
+          <option value="2">Diamond</option>
+          <option value="3">Platinum</option>
+        </select>
+      </div>
+      <div class="chld">
+        <label for="price">price</label>
+        <input class="input" id="price" type="number" name="price" value="45000" />
+      </div>
+      <div class="chld">
+        <label for="date">date</label>
+        <input class="input" id="date" type="date" name="date" />
+      </div>
+      <div class="chld">
+        <label for="location">location</label>
+        <input class="input" id="location" type="text" name="location" />
+      </div>
+      <button onclick="verify()">Get Quot</button>
+    </div>
+    <script>
+      function verify() {
+        const date = document.getElementById("date").value;
+        const location = document.getElementById("location").value;
+        const price = document.getElementById("price").value;
+        const username = document.getElementById("username").value;
+        const pk = document.getElementById("cars").value;
+
+        if ((date && location && price && username && pk) || true) {
+          let Qdata = { date, location, price, username, pk };
+          generatePDF(Qdata);
+        } else alert("plese enter the values in the fields");
+      }
+    </script>
+    <script src="/scripts/converter.js"></script>
+    <script src="/scripts/text-x-y.js"></script>
+    <script src="/scripts/itos.js"></script>
+    <script src="/scripts/list.js"></script>
+    <!-- <embed type="application/pdf" src="http://localhost:9000/qt.pdf" />
+    <script src="script.js"></script> -->
   </body>
 </html>

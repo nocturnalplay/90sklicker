@@ -1,4 +1,83 @@
-embed{
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap");
+
+html,
+body {
+  font-family: "Roboto Slab", serif;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header img {
+  width: 50rem;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-color: rgba(31, 31, 31, 0.829);
+  border-radius: 5px;
+  padding: 20px;
+  font-weight: 900;
+}
+.form .chld {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px;
+}
+.form .chld label{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+.form .chld input,select{
     width: 100%;
-    height: 500vh;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    font-weight: 900;
+}
+.form button{
+    border:none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 900;
+    text-transform: capitalize;
 }
