@@ -36,7 +36,7 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: center;
 }
 .header img {
-  width: 10rem;
+  width: 20rem;
 }
 .form {
   display: flex;
