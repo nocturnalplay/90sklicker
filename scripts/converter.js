@@ -5,8 +5,8 @@ const { PDFDocument, StandardFonts, rgb } = PDFLib
 const package = ["silver", "gold", "diamond", "platinum"]
 
 async function generatePDF(Qdata) {
-  const url = "http://127.0.0.1:5500/public/"
-  const existingPdfBytes = await fetch(url + "/90sQT.pdf").then((res) =>
+  const url = "https://90sklick.netlify.app/public/"
+  const existingPdfBytes = await fetch(url + "90sQT.pdf").then((res) =>
     res.arrayBuffer()
   );
   // Load a PDFDocument from the existing PDF bytes
